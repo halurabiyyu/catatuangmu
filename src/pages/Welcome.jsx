@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import LogoGoogle from "../assets/google.svg";
+import CircleButton from "../components/CircleButton";
 
 export default function welcome() {
   return (
@@ -51,11 +53,24 @@ export default function welcome() {
           </div>
           <div className="container p-2">
             <h1 className="text-slate-500 mb-2">OR</h1>
-            <a href="#" className="rounded-md outline outline-slate-300 mt-4 px-2 py-1">Login with Google</a>
+            <a
+              href="#"
+              className="flex items-center justify-center rounded-md outline outline-slate-300 mt-4 px-4 py-2 hover:bg-slate-100"
+            >
+              <img
+                src={LogoGoogle}
+                alt="Google Logo"
+                className="w-5 h-5 mr-2"
+              />
+              <span>Login with Google</span>
+            </a>
           </div>
         </div>
-        <div className="bg-white w-[50%] max-w-[50%] items-center flex px-5">
-          <h1 className="text-9xl font-bold drop-shadow w-1 hover:underline transition-all">Control Your Budget!</h1>
+        <div className="relative bg-white w-[50%] max-w-[50%]  flex px-5">
+          <h1 className="text-9xl font-bold drop-shadow w-full transition-all flex m-auto">
+            Control Your Budget!
+          </h1>
+            <CircleButton className="absolute top-5 right-5 h-fit"></CircleButton>
         </div>
       </div>
     </>
