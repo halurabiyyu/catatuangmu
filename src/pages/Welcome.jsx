@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react";
 import LogoGoogle from "../assets/google.svg";
 import CircleButton from "../components/CircleButton";
+import Modal from "../components/Modal";
 
 export default function welcome() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Function to toggle modal visibility
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <>
+      <Modal isOpen={isModalOpen} toggleModal={toggleModal} />
       <div className="h-svh flex bg-slate-200 font-mono">
         <div className="m-auto bg-white w-80 p-2 rounded h-fit text-center drop-shadow">
           <h1 className="font-bold text-3xl hover:underline">LOGIN</h1>
@@ -70,7 +79,8 @@ export default function welcome() {
           <h1 className="text-9xl font-bold drop-shadow w-full transition-all flex m-auto">
             Control Your Budget!
           </h1>
-            <CircleButton className="absolute top-5 right-5 h-fit"></CircleButton>
+            <CircleButton className="absolute top-5 right-5 h-fit" toggleModal={toggleModal}></CircleButton>
+            
         </div>
       </div>
     </>
