@@ -19,7 +19,7 @@ const Modal = ({ isOpen, toggleModal }) => {
             {/* Modal header */}
             <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                Terms of Service
+                Catatuangmu? 
               </h3>
               <button
                 type="button"
@@ -48,19 +48,24 @@ const Modal = ({ isOpen, toggleModal }) => {
             {/* Modal body */}
             <div className="p-4 md:p-5 space-y-4">
               <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                With less than a month to go before the European Union enacts
-                new consumer privacy laws for its citizens, companies around the
-                world are updating their terms of service agreements to comply.
+                Catatuangmu adalah aplikasi web yang dirancang untuk membantu
+                pengguna dalam mengelola keuangan pribadi secara mudah dan
+                efisien. Aplikasi ini memungkinkan pengguna mencatat pengeluaran
+                dan pemasukan harian, memantau anggaran, serta mengatur tujuan
+                finansial dengan lebih terorganisir. Dengan antarmuka yang ramah
+                pengguna, Catatuangmu memberikan gambaran yang jelas tentang
+                kondisi keuangan pengguna melalui grafik, laporan, dan
+                notifikasi. Aplikasi ini juga menyediakan fitur pengingat untuk
+                membantu pengguna menjaga disiplin dalam pengelolaan uang.
               </p>
               <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                The European Union’s General Data Protection Regulation
-                (G.D.P.R.) goes into effect on May 25 and is meant to ensure a
-                common set of data rights in the European Union.
+                Catatuangmu hadir sebagai solusi bagi siapa saja yang ingin
+                lebih sadar akan pengeluaran dan pengelolaan keuangan mereka.
               </p>
             </div>
 
             {/* Modal footer */}
-            <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+            {/* <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
               <button
                 onClick={toggleModal}
                 className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -73,7 +78,7 @@ const Modal = ({ isOpen, toggleModal }) => {
               >
                 Decline
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
