@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import LogoGoogle from "../assets/google.svg";
+import LoginGoogle from "../components/LoginGoogle";
 import CircleButton from "../components/CircleButton";
 import Modal from "../components/Modal";
+import LoginForm from "../components/LoginForm";
 
 export default function welcome() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,74 +14,26 @@ export default function welcome() {
 
   return (
     <>
-      <Modal isOpen={isModalOpen} toggleModal={toggleModal} />
       <div className="h-svh flex bg-slate-200 font-mono">
         <div className="m-auto bg-white w-80 p-2 rounded h-fit text-center drop-shadow">
           <h1 className="font-bold text-3xl hover:underline">LOGIN</h1>
           <div className="h-[80%] content-center">
-            <form action="" className="flex-none">
-              <div className="gap-2 p-2 text-left">
-                <label
-                  htmlFor="Email"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Email
-                </label>
-                <div className="">
-                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="abiyyu@dev.com"
-                      autoComplete="email"
-                      className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="mb-2 gap-2 p-2 text-left">
-                <label
-                  htmlFor="Password"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Password
-                </label>
-                <div className="">
-                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                    <input
-                      id="password"
-                      name="password"
-                      type="password"
-                      placeholder="strongPassword123"
-                      className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-              </div>
-            </form>
+            <LoginForm></LoginForm>
           </div>
           <div className="container p-2">
             <h1 className="text-slate-500 mb-2">OR</h1>
-            <a
-              href="#"
-              className="flex items-center justify-center rounded-md outline outline-slate-300 mt-4 px-4 py-2 hover:bg-slate-100"
-            >
-              <img
-                src={LogoGoogle}
-                alt="Google Logo"
-                className="w-5 h-5 mr-2"
-              />
-              <span>Login with Google</span>
-            </a>
+            <LoginGoogle></LoginGoogle>
           </div>
         </div>
         <div className="relative bg-white w-[50%] max-w-[50%]  flex px-5">
           <h1 className="text-9xl font-bold drop-shadow w-full transition-all flex m-auto">
             Control Your Budget!
           </h1>
-            <CircleButton className="absolute top-5 right-5 h-fit" toggleModal={toggleModal}></CircleButton>
-            
+          <CircleButton
+            className="absolute top-5 right-5 h-fit"
+            toggleModal={toggleModal}
+          ></CircleButton>
+          <Modal isOpen={isModalOpen} toggleModal={toggleModal} />
         </div>
       </div>
     </>
